@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .search-box {
+            display: flex;
+        }
+
+        .search-box input {
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        .search-box button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #555;
+            color: white;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .search-box button:hover {
+            background-color: #777;
+        }
+
+        .login-bg {
+            height: 100vh;
+            text-align: center;
+            padding-top: 200px;
+        }
+
+        .homw-sub-crd {
+            border-style: solid;
+            border-radius: 14px;
+            padding: 14px;
+            margin: 1px;
+            border-color: lightgrey;
+        }
+
+        .home-img {
+            border-radius: 4px;
+            height: 100px;
+            width: 60px;
+        }
+
+        .cata-bg {
+            height: 100vh;
+            text-align: center;
+            padding: 14px;
+        }
+
+        .buy-btn {
+            background-color: yellow;
+            border-radius: 12px;
+            padding: 12px;
+            width: 170px;
+            margin: 6px;
+        }
+
+        .buy-btn:hover {
+            background-color: orange;
+        }
+        .back-btn:hover {
+            background-color: black;
+            color: rgb(186, 169, 169);
+            
+        }
+        .back-btn {
+            background-color: grey;
+            border-radius: 12px;
+            padding: 12px;
+            width: 170px;
+            color: white;
+            margin: 6px;
+        }
+
+        .signin-crd {
+            height: 100vh;
+            padding: 14px;
+            padding-top: 60px;
+            padding-left: 40px;
+        }
+
+        .input {
+            margin-bottom: 15px;
+        }
+
+        .align {
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 40vw;
+            margin: 15px;
+            border-radius: 15px;
+        }
+
+        .profile-crd {
+            height: 100vh;
+            padding: 25px;
+        }
+
+        .cart-crd {
+            height: 100vh;
+            padding: 15px;
+        }
+
+        .cart-img {
+            height: 40px;
+            width: 70px;
+        }
+
+        .order-img {
+            height: 90px;
+            width: 50px;
+        }
+
+        .carthead {
+            font-size: 20px;
+        }
+
+        .pay-crd {
+            height: 100vh;
+            padding: 25px;
+        }
+
+        .orders-crd {
+            height: 100vh;
+            padding: 16px;
+        }
+
+        .homebill {
+            height: 28vh;
+            width: 90vw;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div>
+        <div id="sectionhome">
+            <div>
+                <nav class="navbar">
+                    <div>
+                        <a href="#sectionhome" onclick="display('sectionhome')">Home</a>
+                        <a href="#sectionprofile" onclick="display('sectionprofile')">Profile</a>
+                        <a href="#sectionorders" onclick="display('sectionorders')">Orders</a>
+                        <a href="#sectioncart" onclick="display('sectioncart')">Cart</a>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search...">
+                        <button type="submit">Search</button>
+                    </div>
+                </nav>
+                <div>
+                    <img class="homebill" src="https://collegebookstore.in/wp-content/uploads/2021/02/online-book-shopping-sites-in-india.jpg">
+                </div>
+                <div>
+                    <div class="homw-sub-crd">
+                        <img src="https://m.media-amazon.com/images/I/81P2REvs9xL._AC_UL480_FMwebp_QL65_.jpg" class="home-img">
+                        <h1>Book Name</h1>
+                        <p>Description</p>
+                        <p>Price= $......</p>
+                        <a href="#section-cata"><button class="buy-btn" onclick="display('section-cata')">View</button></a>
+                    </div>
+                    <div class="homw-sub-crd">
+                        <img src="https://m.media-amazon.com/images/I/81P2REvs9xL._AC_UL480_FMwebp_QL65_.jpg" class="home-img">
+                        <h1>Book Name</h1>
+                        <p>Description</p>
+                        <p>Price= $......</p>
+                        <a href="#section-cata"><button class="buy-btn" onclick="display('section-cata')">View</button></a>
+                    </div>
+                    <div class="homw-sub-crd">
+                        <img src="https://m.media-amazon.com/images/I/81P2REvs9xL._AC_UL480_FMwebp_QL65_.jpg" class="home-img">
+                        <h1>Book Name</h1>
+                        <p>Description</p>
+                        <p>Price= $......</p>
+                        <a href="#section-cata"><button class="buy-btn" onclick="display('section-cata')">View</button></a>
+                    </div>
+                    <div class="homw-sub-crd">
+                        <img src="https://m.media-amazon.com/images/I/81P2REvs9xL._AC_UL480_FMwebp_QL65_.jpg" class="home-img">
+                        <h1>Book Name</h1>
+                        <p>Description</p>
+                        <p>Price= $......</p>
+                        <a href="#section-cata"><button class="buy-btn" onclick="display('section-cata')">View</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="section-cata">
+            <div class="cata-bg">
+                <img src="https://m.media-amazon.com/images/I/81P2REvs9xL._AC_UL480_FMwebp_QL65_.jpg" class="home-img">
+                <h1>Book Name</h1>
+                <p>Description</p>
+                <p>Price= $......</p>
+                <a href="card.html"><button class="buy-btn">Buy Now</button></a>
+                <button class="buy-btn">Add to Cart</button>
+                <a href="#sectionhome"><button class="back-btn" onclick="display('sectionhome')">Back</button></a>
+            </div>
+        </div>
+        <div id="sectionprofile">
+            <button class="back-btn">Edit</button>
+            <div class="profile-crd">
+                <img class="profile-image" src="https://t3.ftcdn.net/jpg/02/58/89/90/360_F_258899001_68CalsKTRk6PZQgWH9JhR4heBlncCko9.jpg" />
+                <h1>Firstname Lastname</h1>
+                <p>Information about user</p>
+                <a href="start.html"><button class="buy-btn" onclick="display('sectionregister')">Logout</button></a>
+                <a href="#sectionhome"><button class="back-btn" onclick="display('sectionhome')">Back</button></a>
+            </div>
+        </div>
+        <div id="sectioncart">
+            <div class="cart-crd">
+                <div>
+                    <img class="cart-img" src="https://media.istockphoto.com/id/1206806317/vector/shopping-cart-icon-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=1RRQJs5NDhcB67necQn1WCpJX2YMfWZ4rYi1DFKlkNA=">
+                </div>
+                <div>
+                    <div>
+                        <img src="https://m.media-amazon.com/images/I/81P2REvs9xL._AC_UL480_FMwebp_QL65_.jpg" class="order-img">
+                        <h1 class="carthead">Book Name</h1>
+                        <p>Price= $......</p>
+                        <a href="#section-cata"><button class="buy-btn" onclick="display('section-cata')">View</button></a>
+                    </div>
+                    <div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAbmosJkB4VL0ByvF-YwL1hfyFR9NAtzW5pQ&s" class="order-img">
+                        <h1 class="carthead">Book Name</h1>
+                        <p>Price= $......</p>
+                        <a href="#section-cata"><button class="buy-btn" onclick="display('section-cata')">View</button></a>
+                    </div>
+                    <div>
+                        <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/contemporary-fiction-night-time-book-cover-design-template-1be47835c3058eb42211574e0c4ed8bf.jpg?ts=1734004864" class="order-img">
+                        <h1 class="carthead">Book Name</h1>
+                        <p>Price= $......</p>
+                        <a href="#section-cata"><button class="buy-btn" onclick="display('section-cata')">View</button></a>
+                    </div>
+                </div>
+                <a href="#sectionhome"><button class="back-btn" onclick="display('sectionhome')">Back</button></a>
+            </div>
+        </div>
+        <div id="sectionorders">
+            <div class="orders-crd">
+                <h1>Your Orders</h1>
+                <div>
+                    <div>
+                        <img src="https://m.media-amazon.com/images/I/81P2REvs9xL._AC_UL480_FMwebp_QL65_.jpg" class="order-img">
+                        <h1 class="carthead">Book Name</h1>
+                        <p>Price= $......</p>
+                        <p>Delivery on 01/01/2020</p>
+                        <button class="buy-btn">View</button>
+                    </div>
+                    <div>
+                        <img src="https://d1csarkz8obe9u.cloudfront.net/themedlandingpages/tlp_hero_book-cover-adb8a02f82394b605711f8632a44488b.jpg?ts%20=%201698323696" class="order-img">
+                        <h1 class="carthead">Book Name</h1>
+                        <p>Price= $......</p>
+                        <p>Delivery on 01/01/2020</p>
+                        <button class="buy-btn">View</button>
+                    </div>
+                </div>
+                <a href="#sectionhome"><button class="back-btn" onclick="display('sectionhome')">Back</button></a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</body>
+
+</html>

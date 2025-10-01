@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function isValidEmail(email) 
+        {
+            if (!email.includes("@")) 
+                return false;
+            var parts = email.split("@");
+            if (parts.length !== 2) 
+                return false;
+            var local=parts[0];
+            var domain = parts[1];
+            if (local.length == 0 || domain.length == 0) 
+                return false;
+            if (!domain.includes(".")) 
+                return false;
+            if (domain.startsWith(".") || domain.endsWith(".")) 
+                return false;
+            return true;
+        }
+        function validateform()
+        {
+            let a=document.getElementById("name").value.trim();
+            let b=document.getElementById("username").value.trim();
+            let c=document.getElementById("pass").value.trim();
+            let d=document.getElementById("cpass").value.trim();
+            if(a.length<=6)
+            {
+                alert("Name 6 character required");
+                return false;
+            }
+            if(c.length<6)
+            {
+                alert("Password 6 character required");
+                return false;
+            }
+            if(!isValidEmail(b))
+            {
+                alert("Invallid email");
+                return false;
+            }                
+            if(d!=c)   
+            {
+                alert("Passwords doesn't match");
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .buy-btn:hover {
+            background-color: orange;
+        }
+        .back-btn:hover {
+            background-color: black;
+            color: rgb(186, 169, 169);
+            
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .search-box {
+            display: flex;
+        }
+
+        .search-box input {
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        .search-box button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #555;
+            color: white;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .search-box button:hover {
+            background-color: #777;
+        }
+
+        .login-bg {
+            height: 100vh;
+            text-align: center;
+            padding-top: 200px;
+        }
+
+        .homw-sub-crd {
+            border-style: solid;
+            border-radius: 14px;
+            padding: 14px;
+            margin: 1px;
+            border-color: lightgrey;
+        }
+
+        .home-img {
+            border-radius: 4px;
+            height: 100px;
+            width: 60px;
+        }
+
+        .cata-bg {
+            height: 100vh;
+            text-align: center;
+            padding: 14px;
+        }
+
+        .buy-btn {
+            background-color: yellow;
+            border-radius: 12px;
+            padding: 12px;
+            width: 170px;
+            margin: 6px;
+        }
+
+        .back-btn {
+            background-color: grey;
+            border-radius: 12px;
+            padding: 12px;
+            width: 170px;
+            color: white;
+            margin: 6px;
+        }
+
+        .signin-crd {
+            height: 100vh;
+            padding: 14px;
+            padding-top: 60px;
+            padding-left: 40px;
+        }
+
+        .input {
+            margin-bottom: 15px;
+        }
+
+        .align {
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 40vw;
+            margin: 15px;
+            border-radius: 15px;
+        }
+
+        .profile-crd {
+            height: 100vh;
+            padding: 25px;
+        }
+
+        .cart-crd {
+            height: 100vh;
+            padding: 15px;
+        }
+
+        .cart-img {
+            height: 40px;
+            width: 70px;
+        }
+
+        .order-img {
+            height: 90px;
+            width: 50px;
+        }
+
+        .carthead {
+            font-size: 20px;
+        }
+
+        .pay-crd {
+            height: 100vh;
+            padding: 25px;
+        }
+
+        .orders-crd {
+            height: 100vh;
+            padding: 16px;
+        }
+
+        .homebill {
+            height: 28vh;
+            width: 90vw;
+        }
+    </style>
+</head>
+<body>
+    <div id="sectionsignin">
+        <div class="signin-crd">
+            <form onsubmit="return validateform()" id="myForm" action="project.html">
+                <label for="name">Name</label><br>
+                <input id="name" class="input" type="text"><br>
+                <label for="username">E-mail</label><br>
+                <input type="email" class="input" id="username"><br>
+                <label for="pass">Password</label><br>
+                <input type="password" class="input" id="pass"><br>
+                <label for="cpass">Confirm Password</label><br>
+                <input type="password" class="input" id="cpass"><br>
+                <input type="submit" class="buy-btn">
+            </form>
+            <div class="align">
+                <a href="start.html"><button class="back-btn">Back</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
